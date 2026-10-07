@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+	--ink: #172d27;
+	--forest: #10251f;
+	--paper: #f0efe6;
+	--paper-deep: #e6e5d9;
+	--muted: #718078;
+	--line: #d4d8cc;
+	--lime: #d2ed68;
+	--orange: #e17b4b;
+	--teal: #2d8775;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+	font-family: 'DM Sans', sans-serif;
+}
+
+body {
+	background-color: var(--forest);
+	background-image: linear-gradient(rgba(16, 37, 31, 0.9), rgba(16, 37, 31, 0.94)), url('../../images/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: var(--ink);
+}
+
+body:before {
+	background: linear-gradient(135deg, rgba(210, 237, 104, 0.08), transparent 45%);
+}
+
+#wrapper {
+	background: transparent;
+	box-shadow: none;
+}
+
+#intro {
+	min-height: min(82vh, 760px);
+	padding: 7rem 2rem 5rem;
+	background: transparent;
+	opacity: 1;
+	transform: none;
+	transition: none;
+}
+
+body.is-preload #intro,
+#intro.hidden {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+#intro h1 {
+	font-family: 'DM Sans', sans-serif;
+	font-size: clamp(3.4rem, 8vw, 7rem);
+	font-weight: 700;
+	line-height: 0.98;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#intro p {
+	max-width: 42rem;
+	color: #d2ddd4;
+	font-size: 1.1rem;
+	font-weight: 400;
+	line-height: 1.7;
+	letter-spacing: 0;
+}
+
+#intro .actions a {
+	border-color: var(--lime);
+	color: var(--lime) !important;
+}
+
+#header {
+	border: 0;
+	background: var(--forest);
+	height: auto;
+	min-height: 4.5rem;
+	padding: 0.75rem 1.5rem;
+	justify-content: center;
+	pointer-events: auto;
+	user-select: auto;
+}
+
+#intro + #header {
+	margin-top: 0;
+}
+
+#intro + #header .logo {
+	transform: none;
+	opacity: 1;
+	visibility: visible;
+}
+
+#header .logo {
+	border: 0;
+	color: var(--paper) !important;
+	transform: none;
+	opacity: 1;
+	visibility: visible;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#header .logo span {
+	color: var(--lime);
+	font-weight: 500;
+}
+
+#nav {
+	background: #e9e9dd;
+	color: var(--ink);
+}
+
+#nav ul.links li a {
+	color: var(--ink);
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#nav ul.links li.active a,
+#nav ul.links li a:hover {
+	background: var(--lime);
+	color: var(--ink) !important;
+}
+
+#nav ul.icons a {
+	color: var(--ink);
+}
+
+#main {
+	background: var(--paper);
+	color: var(--ink);
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4 {
+	color: var(--ink);
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#main p,
+#main li,
+#main dd {
+	color: #42544b;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 0.98rem;
+	line-height: 1.75;
+}
+
+#main a {
+	color: var(--teal);
+}
+
+#main .post {
+	padding: 4rem 4.5rem;
+}
+
+#main .post.featured {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	background: var(--paper-deep);
+	text-align: left;
+}
+
+#main .post.featured .date,
+#main .post .date {
+	color: var(--teal);
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+}
+
+#main .post.featured h2 {
+	max-width: 52rem;
+	font-size: clamp(2.2rem, 5vw, 4.3rem);
+	line-height: 1.05;
+}
+
+#main .post.featured h2 a {
+	border: 0;
+	color: var(--ink);
+}
+
+#main .post.featured p {
+	max-width: 48rem;
+	font-size: 1.08rem;
+}
+
+#main .image.main,
+#main .posts .image.fit {
+	display: none;
+}
+
+#main .posts {
+	padding: 3rem 4.5rem 4rem;
+	gap: 0;
+}
+
+#main .posts article {
+	padding: 2rem 1.6rem;
+	border-top: 1px solid var(--line);
+}
+
+#main .posts article h2 {
+	font-size: 1.55rem;
+	line-height: 1.2;
+}
+
+#main .posts article h2 a {
+	border: 0;
+	color: var(--ink);
+}
+
+#main .posts article p {
+	min-height: 5.4rem;
+}
+
+#main .button,
+#footer input[type="submit"] {
+	border-color: var(--ink) !important;
+	border-radius: 2px;
+	color: var(--ink) !important;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#main .button:hover,
+#footer input[type="submit"]:hover {
+	border-color: var(--teal) !important;
+	color: var(--teal) !important;
+}
+
+#main .button.primary {
+	border-color: var(--teal) !important;
+	background: var(--teal);
+	color: var(--paper) !important;
+}
+
+#main .pagination {
+	display: none;
+}
+
+#footer {
+	background: #142b24;
+	color: #e4e9dd;
+}
+
+#footer h3,
+#footer label,
+#footer p,
+#footer a {
+	color: #e4e9dd;
+}
+
+#footer h3 {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+#copyright {
+	background: var(--forest);
+	color: #a9b8ae;
+}
+
+#copyright a {
+	color: var(--lime);
+}
+
+.portfolio-kicker {
+	color: var(--teal);
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.76rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+.portfolio-panel {
+	padding: 1.5rem;
+	border: 1px solid var(--line);
+	background: rgba(255, 255, 255, 0.35);
+}
+
+.portfolio-panel h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.15rem;
+}
+
+.portfolio-panel p:last-child {
+	margin-bottom: 0;
+}
+
+.portfolio-tag {
+	display: inline-block;
+	margin: 0 0.35rem 0.45rem 0;
+	padding: 0.35rem 0.65rem;
+	border: 1px solid var(--line);
+	color: var(--ink);
+	font-size: 0.82rem;
+}
+
+.portfolio-meta {
+	font-family: 'IBM Plex Mono', monospace !important;
+	font-size: 0.8rem !important;
+}
+
+#navPanel {
+	background: var(--forest);
+}
+
+@media screen and (max-width: 736px) {
+	#intro {
+		min-height: 76vh;
+		padding: 5rem 1.5rem 4rem;
+	}
+
+	#intro + #header {
+		margin-top: 0;
+	}
+
+	#intro h1 {
+		font-size: 3.4rem;
+	}
+
+	#main .post,
+	#main .post.featured {
+		padding: 3rem 1.5rem;
+	}
+
+	#main .posts {
+		padding: 1.5rem;
+	}
+
+	#main .posts article {
+		padding: 1.75rem 0;
+	}
+
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+}
